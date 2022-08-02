@@ -5,7 +5,7 @@
 - [Integration methods](#integration-methods)
   - [Push-Pull](#push-pull)
   - [Realtime](#realtime)
-  - [SuperAPI](#superapi)
+  - [Proxy Endpoint](#proxy-endpoint)
 
 [Oxylabs’ Web Scraper API](https://oxylabs.io/products/scraper-api/web) is a data scraper API designed to collect real-time data from websites at scale. This web scraping tool serves as a trustworthy solution for gathering information from complicated targets and ensures the ease of the crawling process. Web Scraper API best fits for cases such as website changes monitoring, fraud protection, and travel fare monitoring.
 
@@ -142,11 +142,11 @@ curl --user
 }
 ```
 
-### SuperAPI
+### Proxy Endpoint
 
-Instead of parameters such as domain and search query, SuperAPI only takes completely formed URLs. 
+Instead of parameters such as domain and search query, Proxy Endpoint only takes completely formed URLs. 
 
-**SuperAPI code sample in the Python programming language:**
+**Proxy Endpoint code sample in the Python programming language:**
 
 ```shell
 curl -k -x realtime.oxylabs.io:60000 -U USERNAME:PASSWORD -H
