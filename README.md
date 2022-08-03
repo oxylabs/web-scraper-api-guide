@@ -7,11 +7,11 @@
   - [Realtime](#realtime)
   - [Proxy Endpoint](#proxy-endpoint)
 
-[Oxylabs’ Web Scraper API](https://oxylabs.io/products/scraper-api/web) is a data scraper API designed to collect real-time data from websites at scale. This web scraping tool serves as a trustworthy solution for gathering information from complicated targets and ensures the ease of the crawling process. Web Scraper API best fits for cases such as website changes monitoring, fraud protection, and travel fare monitoring.
+[Oxylabs’ Web Scraper API](https://oxy.yt/Xr2D) is a data scraper API designed to collect real-time data from websites at scale. This web scraping tool serves as a trustworthy solution for gathering information from complicated targets and ensures the ease of the crawling process. Web Scraper API best fits for cases such as website changes monitoring, fraud protection, and travel fare monitoring.
 
 In this guide, we’ll explain how Web Scraper API works and walk you through the process of getting started with this tool without hassle. 
 
-For a detailed explanation, see our [blog post](https://oxylabs.io/blog/web-scraper-api-quick-start-guide).
+For a detailed explanation, see our [blog post](https://oxy.yt/rr90).
 
 ## Authentication
 
@@ -153,4 +153,4 @@ curl -k -x realtime.oxylabs.io:60000 -U USERNAME:PASSWORD -H
 "X-Oxylabs-Geo-Location: United States" "https://ip.oxylabs.io"
 ```
 
-If you wish to find out more about Web Scraper API Quick Start Guide, see our [blog post](https://oxylabs.io/blog/web-scraper-api-quick-start-guide).
+If you wish to find out more about Web Scraper API Quick Start Guide, see our [blog post](https://oxy.yt/rr90).
