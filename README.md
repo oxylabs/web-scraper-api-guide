@@ -30,6 +30,7 @@ curl --user "USERNAME:PASSWORD"'https://realtime.oxylabs.io/v1/queries' -H "Cont
 ```shell
 curl --user "USERNAME:PASSWORD"'https://data.oxylabs.io/v1/queries' -H "Content-Type: application/json" -d '{"source": "universal", "url": "https://ip.oxylabs.io", "geo_location": "United States"}'
 ```
+If you are observing low success rates or retrieve empty content, please try using additional `"render":"html"` parameter in your request. More information about render parameter can be found [here](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#render).
 
 **Sample of the initial response output:**
 
@@ -124,6 +125,8 @@ curl --user
 "https://ip.oxylabs.io", "geo_location": "United States"}'
 ```
 
+If you are observing low success rates or retrieve empty content, please try using additional `"render":"html"` parameter in your request. More information about render parameter can be found [here](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#render).
+
 **Example response body that will be returned on the open connection:**
 
 ```json
@@ -152,5 +155,7 @@ Instead of parameters such as domain and search query, Proxy Endpoint only takes
 curl -k -x realtime.oxylabs.io:60000 -U USERNAME:PASSWORD -H
 "X-Oxylabs-Geo-Location: United States" "https://ip.oxylabs.io"
 ```
+
+If you are observing low success rates or retrieve empty content, please try adding additional `"x-oxylabs-render: html"` header with your request.
 
 If you wish to find out more about Web Scraper API Quick Start Guide, see our [blog post](https://oxy.yt/rr90).
