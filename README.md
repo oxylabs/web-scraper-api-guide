@@ -19,7 +19,7 @@ For a detailed explanation, see our [blog post](https://oxy.yt/rr90).
 Web Scraper API employs basic HTTP authentication which requires username and password:
 
 ```shell
-curl --user "USERNAME:PASSWORD"'https://realtime.oxylabs.io/v1/queries' -H "Content-Type: application/json" -d '{"source": "universal", "url": "https://ip.oxylabs.io"}'
+curl --user "USERNAME:PASSWORD"'https://realtime.oxylabs.io/v1/queries' -H "Content-Type: application/json" -d '{"source": "universal", "url": "https://ip.oxylabs.io/location"}'
 ```
 
 ## Integration methods
@@ -29,7 +29,7 @@ curl --user "USERNAME:PASSWORD"'https://realtime.oxylabs.io/v1/queries' -H "Cont
 **Example of a single query request:**
 
 ```shell
-curl --user "USERNAME:PASSWORD"'https://data.oxylabs.io/v1/queries' -H "Content-Type: application/json" -d '{"source": "universal", "url": "https://ip.oxylabs.io", "geo_location": "United States"}'
+curl --user "USERNAME:PASSWORD"'https://data.oxylabs.io/v1/queries' -H "Content-Type: application/json" -d '{"source": "universal", "url": "https://ip.oxylabs.io/location", "geo_location": "United States"}'
 ```
 If you are observing low success rates or retrieve empty content, please try using additional `"render":"html"` parameter in your request. More information about render parameter can be found [here](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#render).
 
@@ -49,7 +49,7 @@ If you are observing low success rates or retrieve empty content, please try usi
   "parse": false,
   "parser_type": null,
   "render": null,
-  "url": "https://ip.oxylabs.io",
+  "url": "hhttps://ip.oxylabs.io/location",
   "query": "",
   "source": "universal",
   "start_page": 1,
@@ -101,12 +101,12 @@ curl --user "USERNAME:PASSWORD"
 {
     "results": [
       {
-        "content": "24.5.203.132\n", # Actual content from https://ip.oxylabs.io
-        "created_at": "2021-09-30 12:40:32",
-        "updated_at": "2021-09-30 12:40:35",
+        "content": "{\"ip\":\"45.24.127.174\",\"providers\":{\"dbip\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"AT\\u0026T Services, Inc.\",\"city\":\"Birmingham\",\"zip_code\":\"\",\"time_zone\":\"\",\"meta\":\"\\u003ca href='https:\/\/db-ip.com'\\u003eIP Geolocation by DB-IP\\u003c\/a\\u003e\"},\"ip2location\":{\"country\":\"US\",\"asn\":\"\",\"org_name\":\"\",\"city\":\"Birmingham\",\"zip_code\":\"35201\",\"time_zone\":\"-06:00\",\"meta\":\"This site or product includes IP2Location LITE data available from \\u003ca href=\\\"https:\/\/lite.ip2location.com\\\"\\u003ehttps:\/\/lite.ip2location.com\\u003c\/a\\u003e.\"},\"ipinfo\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"AT\\u0026T Services, Inc.\",\"city\":\"\",\"zip_code\":\"\",\"time_zone\":\"\",\"meta\":\"\\u003cp\\u003eIP address data powered by \\u003ca href=\\\"https:\/\/ipinfo.io\\\" \\u003eIPinfo\\u003c\/a\\u003e\\u003c\/p\\u003e\"},\"maxmind\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"ATT-INTERNET4\",\"city\":\"Madison\",\"zip_code\":\"\",\"time_zone\":\"-06:00\",\"meta\":\"This product includes GeoLite2 Data created by MaxMind, available from https:\/\/www.maxmind.com.\"}}}\n", # Actual content from https://ip.oxylabs.io/location
+        "created_at": "2023-12-18 10:01:59",
+        "updated_at": "2023-12-18 10:01:59",
         "page": 1,
-        "url": "https://ip.oxylabs.io",
-        "job_id": "6849322054852825089",
+        "url": "https://ip.oxylabs.io/location",
+        "job_id": "7142453937470222339",
         "status_code": 200
       }
     ]
@@ -123,7 +123,7 @@ With this method, you can send your request and receive data back on the same op
 curl --user
 "USERNAME:PASSWORD"'https://realtime.oxylabs.io/v1/queries' -H
 "Content-Type: application/json" -d '{"source": "universal", "url":
-"https://ip.oxylabs.io", "geo_location": "United States"}'
+"https://ip.oxylabs.io/location", "geo_location": "United States"}'
 ```
 
 If you are observing low success rates or retrieve empty content, please try using additional `"render":"html"` parameter in your request. More information about render parameter can be found [here](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#render).
@@ -134,12 +134,12 @@ If you are observing low success rates or retrieve empty content, please try usi
 {
     "results": [
       {
-        "content": "24.5.203.132\n", // Actual content from https://ip.oxylabs.io
-        "created_at": "2021-09-30 12:40:32",
-        "updated_at": "2021-09-30 12:40:35",
+        "content": "{\"ip\":\"45.24.127.174\",\"providers\":{\"dbip\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"AT\\u0026T Services, Inc.\",\"city\":\"Birmingham\",\"zip_code\":\"\",\"time_zone\":\"\",\"meta\":\"\\u003ca href='https:\/\/db-ip.com'\\u003eIP Geolocation by DB-IP\\u003c\/a\\u003e\"},\"ip2location\":{\"country\":\"US\",\"asn\":\"\",\"org_name\":\"\",\"city\":\"Birmingham\",\"zip_code\":\"35201\",\"time_zone\":\"-06:00\",\"meta\":\"This site or product includes IP2Location LITE data available from \\u003ca href=\\\"https:\/\/lite.ip2location.com\\\"\\u003ehttps:\/\/lite.ip2location.com\\u003c\/a\\u003e.\"},\"ipinfo\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"AT\\u0026T Services, Inc.\",\"city\":\"\",\"zip_code\":\"\",\"time_zone\":\"\",\"meta\":\"\\u003cp\\u003eIP address data powered by \\u003ca href=\\\"https:\/\/ipinfo.io\\\" \\u003eIPinfo\\u003c\/a\\u003e\\u003c\/p\\u003e\"},\"maxmind\":{\"country\":\"US\",\"asn\":\"AS7018\",\"org_name\":\"ATT-INTERNET4\",\"city\":\"Madison\",\"zip_code\":\"\",\"time_zone\":\"-06:00\",\"meta\":\"This product includes GeoLite2 Data created by MaxMind, available from https:\/\/www.maxmind.com.\"}}}\n", # Actual content from https://ip.oxylabs.io/location
+        "created_at": "2023-12-18 10:01:59",
+        "updated_at": "2023-12-18 10:01:59",
         "page": 1,
-        "url": "https://ip.oxylabs.io",
-        "job_id": "6849322054852825089",
+        "url": "https://ip.oxylabs.io/location",
+        "job_id": "7142453937470222339",
         "status_code": 200
       }
     ]
@@ -154,7 +154,7 @@ Instead of parameters such as domain and search query, Proxy Endpoint only takes
 
 ```shell
 curl -k -x realtime.oxylabs.io:60000 -U USERNAME:PASSWORD -H
-"X-Oxylabs-Geo-Location: United States" "https://ip.oxylabs.io"
+"X-Oxylabs-Geo-Location: United States" "https://ip.oxylabs.io/location"
 ```
 
 If you are observing low success rates or retrieve empty content, please try adding additional `"x-oxylabs-render: html"` header with your request.
